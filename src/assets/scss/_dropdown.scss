@@ -1,0 +1,55 @@
+/* Custom Drop Down Styling*/
+
+select {
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #2c3e50;
+    background-image: none;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+  
+ 
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #2c3e50;
+    overflow: hidden;
+    border-radius: .25em;
+    margin: 0 auto 20px;
+
+    @media screen and (max-width: 500px) {
+      width: 95%;
+    }
+  }
+  
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #34495e;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+  }
+  
+  .select:hover::after {
+    color: #f39c12;
+  }
+  
